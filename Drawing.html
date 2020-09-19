@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing</title>
+    <style>
+      body{
+        background-color: #0c542e;
+      }
+
+      .container{
+        overflow: auto;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: flex;
+        background-color: #057d3e;
+        margin-top:100px;
+        margin: 0 auto;
+        justify-content: center;
+        width: 75%;
+        max-width: 750px;
+
+      }
+
+      .grid{
+        margin:10px;
+        width: 75vw;
+        height: 50vw;
+        display: grid;
+        border: 0.3px solid black;
+
+      }
+
+      #top{
+        margin: 0 auto;
+        font-size: 50px;
+        line-height: 75px;
+        text-align: center;
+      }
+      #buttons{
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .button.normal{
+        border: blue;
+        color: #004008;
+        background-color:#8ac291;
+        margin: 25px 10px;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        //transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 5px;
+
+      }
+       #colorbutton{
+        position: relative;
+        display: inline-block;
+      }
+
+      #bgcolor{
+        padding: 15px 25px;
+        margin: 25px 10px;
+        color: #004008;
+        background-color:#8ac291;
+        cursor: pointer;
+        border-radius: 5px;
+        border: blue;
+        font-size: 16px;
+      }
+
+      #colorSelector{
+        padding: 15px 25px;
+        margin: 25px 10px;
+        color: #004008;
+        background-color:#8ac291;
+        cursor: pointer;
+        border-radius: 5px;
+        border: blue;
+        font-size: 16px;
+        opacity:0;
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id='top'> Sketch-Pad </div>
+
+    <div id='buttons'>
+      <button id='draw' class='button normal'> Start Drawing</button>
+      <button id='erase' class='button normal'> Clear Canvas </button>
+      <button id='size' class='button normal'> Set Canvas Size </button>
+      <div id='colorbutton'>
+        <button id='bgcolor' class ='button'>Select Color </button>
+        <input id='colorSelector' type='color' value="#004008"/>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="grid">
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="Drawing.js">
+
+  </script>
+</html>
