@@ -3,15 +3,9 @@ let drawingB = document.querySelector('#draw');
 let eraseB = document.querySelector('#erase');
 let sizeB = document.querySelector('#size');
 
-//need a function that will create a grid of sqaures depending on prompt
-//creating a 16x16 square grid of sqaure divs
+
 createGrid(16)
 
-//begin hover effect
-
-
-// if the size button is pressed then change the size of the canvas according to
-// input.
 
 sizeB.addEventListener('click', sizePrompt);
 drawingB.addEventListener('click', hover);
@@ -66,10 +60,6 @@ function isValidNumber(num){
   }
 }
 
-/*
-Setting up a "hover" effect for the squares so that the grid divs change color
-when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
- */
 
 function hover(){
   let boxes = Array.from(grid.children)
